@@ -30,7 +30,7 @@ public class AuthenticateController {
 
     // generte token
     @SneakyThrows
-    @PostMapping("/generate-token")
+    @PostMapping("/login")
     public ResponseEntity<?> generateToken(@RequestBody JwtRequest jwtRequest) {
         try {
             authenticate(jwtRequest.getUsername(), jwtRequest.getPassword());

@@ -32,22 +32,7 @@ public class UserController {
         return ResponseEntity.ok(users);
     }
 
-    @PostMapping("/signup")
-    public ResponseEntity<?> signUp(@RequestBody UserRequestDTO newUserDTO) {
-        // Kiểm tra xem người dùng đã tồn tại chưa
-        if (userService.existsByUsername(newUserDTO.getUsername())) {
-            return ResponseEntity.badRequest().body("Username is already taken!");
-        }
 
-        // Gọi service để đăng ký người dùng và nhận kết quả dưới dạng UserDTO
-        UserDTO registeredUserDTO = userService.signup(newUserDTO);
-
-        if (registeredUserDTO == null) {
-            return ResponseEntity.badRequest().body("Failed to register user!");
-        }
-
-        return ResponseEntity.ok("User registered successfully!");
-    }
 
 
 }

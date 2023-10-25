@@ -1,11 +1,6 @@
 package lab.base.layer.user;
 
-import lab.base.entity.UserRole;
-import lab.base.layer.role.RoleDTO;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;

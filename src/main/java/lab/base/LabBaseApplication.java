@@ -43,22 +43,22 @@ public class LabBaseApplication  implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("starting code");
-        UserDTO user = new UserDTO();
-        user.setUsername("admin");
-        user.setPassword(this.bCryptPasswordEncoder.encode("123123"));
-
-        RoleDTO role1 = new RoleDTO();
-        role1.setRoleId(43L);
-        role1.setRoleName("USER"); // Không cần set roleId
-
-        Set<UserRoleDTO> userRoleSet = new HashSet<>();
-        UserRoleDTO userRole = new UserRoleDTO();
-        userRole.setRole(role1);
-        userRole.setUser(user);
-        userRoleSet.add(userRole);
-
-        UserDTO user1 = userService.createUser(user, userRoleSet);
-        System.out.println(user1.getUsername());
+//        UserDTO user = new UserDTO();
+//        user.setUsername("admin");
+//        user.setPassword(this.bCryptPasswordEncoder.encode("123123"));
+//
+//        RoleDTO role1 = new RoleDTO();
+//        role1.setRoleId(43L);
+//        role1.setRoleName("USER"); // Không cần set roleId
+//
+//        Set<UserRoleDTO> userRoleSet = new HashSet<>();
+//        UserRoleDTO userRole = new UserRoleDTO();
+//        userRole.setRole(role1);
+//        userRole.setUser(user);
+//        userRoleSet.add(userRole);
+//
+//        UserDTO user1 = userService.createUser(user, userRoleSet);
+//        System.out.println(user1.getUsername());
     }
 
 

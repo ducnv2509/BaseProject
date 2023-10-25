@@ -29,6 +29,7 @@ public class Swagger2Config {
 //                        "/api/accounts/**"
 //                        ))
                 .apiInfo(apiEndPointsInfo());
+//                .host("http://localhost:8080");
     }
 
 //    @Bean
